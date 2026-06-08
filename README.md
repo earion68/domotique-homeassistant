@@ -44,10 +44,10 @@ The *Retour Maison* scripts handle arriving home via the garage. The logic branc
 
 The template binary sensors for each household member pick a different profile picture depending on context: sleeping (phone charging wirelessly or Do Not Disturb active), home and awake, at a known workplace (detected by GPS zone), away with approximate location, or away with unknown location. This feeds directly into the dashboard person cards.
 
-### Insomnia mode
+### Sleep mode
 `automations/modes.yaml`
 
-A single boolean toggle (`input_boolean.mode_insomnie`) disables six automations (motion lights, presence announcements, gate/garage notifications), turns off the multimedia switch, and prevents the scheduled morning shutter opening. Toggling it off restores every automation and re-enables the shutter schedule.
+A single boolean toggle (`input_boolean.mode_nuit`) starts a complete sequence of putting the home in Sleep mode: turning off TV playback if relevant, turning off multimedia, closing covers, switching off lights in sequence till the bedroom, announcing potential unlocked or opened doors or windows through TTS, activating alarm.
 
 ### Notification & TTS pipeline
 `scripts/notifications.yaml`
@@ -164,8 +164,8 @@ Nine Lovelace dashboards:
 | Garden (`dashboard_jardin`) | Outdoor sensors, mower, irrigation |
 | Map (`dashboard_carte`) | Household member location map |
 | Persons (`lovelace_personnes`) | Per-person presence and status |
-| 3D Printers (`imprimantes_3d`) | Bambu Lab + Klipper printer monitoring |
-| Infrastructure (`lovelace_infrastructure`) | Server health, Docker containers, network |
+| 3D Printers (`imprimantes_3d`) | Bambu Lab + Prusa printers monitoring |
+| Infrastructure (`lovelace_infrastructure`) | Servers health, Docker containers, network |
 
 ---
 
