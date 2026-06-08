@@ -1,7 +1,7 @@
 # Home Assistant Configuration
 
 Personal smart home configuration running on [Home Assistant](https://www.home-assistant.io/), hosted on a self-managed home server (Lyra).
-
+This instance is live since 2022.
 This repository contains automations, scripts, templates, dashboards, and integrations for a multi-room smart home setup. All secrets are excluded via `.gitignore` — a `secrets.yaml.example` file is provided as a reference.
 
 ---
@@ -178,7 +178,20 @@ Nine Lovelace dashboards:
 
 ## Screenshots
 
-*Screenshots coming soon.*
+### Main kiosk display
+
+![Main kiosk display](screenshots/cetus-1.png)
+![Main kiosk display live](screenshots/cetus-pic-1.jpg)
+![Main kiosk display electronics](screenshots/cetus-pic-2.jpg)
+
+### Mobile dashboard
+
+![Main instance](screenshots/main-01.png)
+
+### Small kiosks
+
+![Alarm clock](screenshots/kiosk-01.png)
+![Main entrance](screenshots/kiosk-02.png)
 
 ---
 
