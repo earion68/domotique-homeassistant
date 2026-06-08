@@ -37,7 +37,7 @@ When playback starts on the TV or Plex, the system checks a set of conditions be
 ### Garage return-home flow with alarm awareness
 `packages/security.yaml`
 
-The *Retour Maison* scripts handle arriving home via the garage. The logic branches on two axes — whether the house is occupied and whether the alarm is armed. If the house is occupied and the alarm is disarmed, the gate and garage door open immediately with the light. If the alarm is armed or the house is empty, a push notification is sent asking for confirmation with a Yes/No action button before opening anything, preventing accidental disarms or entries.
+The *Retour Maison* scripts handle arriving home via the garage. The logic branches on two axes — whether the house is occupied and whether the alarm is armed. If the house is occupied and the alarm is disarmed, the gate and garage door open immediately with the light. If the alarm is armed or the house is empty, a push notification is sent asking for alarm code before opening anything, preventing accidental disarms or entries.
 
 ### Context-aware presence avatars
 `packages/security.yaml`
@@ -122,7 +122,6 @@ Custom template entities under `templates/`:
 
 | Component | Purpose |
 |-----------|---------|
-| [Alarmo](https://github.com/nielsfaber/alarmo) | Full alarm panel with zones, codes, and notifications |
 | [Bambu Lab](https://github.com/greghesp/ha-bambu-lab) | Bambu X1C 3D printer monitoring |
 | [Moonraker](https://github.com/marcolivierarsenault/moonraker-home-assistant) | Klipper/Voron 3D printer control |
 | [Frigate](https://github.com/blakeblackshear/frigate) | Local NVR — camera events, object detection |
